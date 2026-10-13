@@ -375,16 +375,18 @@ npm run test:demo
 | `npm run test:demo` | 4 项通过 | 四个单文件页面实际运行，无外部资产或 `/api/state` 请求，组件状态与独立 demo 控件有效 |
 | `npm run test:e2e` | 29 项通过，exit 0；0 失败、0 跳过 | 既有 App 14 项及新增 API 整合 15 项；包含身高删数据后范围保持与真实新 iframe 状态恢复、来源拒绝、SDK 与列表往返，以及 0 px 容器显式恢复排队后有尺寸时实际发送／恢复 |
 | TypeScript 构建检查 | exit 0 | App、宿主与共享契约；新增 API 回归文件也通过独立严格类型检查 |
+| 已发布 HTTPS 页面 | 5 项实际浏览器验证通过 | 整合 App 的记录增删改与刷新保存、三个独立组件的交互／空状态／重载恢复、API 文档与导航；无未捕获脚本异常 |
+| 发布文件一致性 | 7 个文件 HTTP 200，SHA256 与本机构建一致 | 四个单文件 demo、API HTML 及两份 v1.3 Markdown |
 
-本轮发布目标如下，**发布后的 HTTP 与页面验证结果另行登记；以下路径不提前表示线上已通过**：
+以下入口已于 2026-10-13 发布至 GitHub Pages，并完成 HTTP、文件一致性及实际 HTTPS 浏览器验证：
 
-| 入口 | 预期线上路径 |
+| 入口 | 在线链接 |
 |---|---|
-| 整合 App | `https://tiemeng2000.github.io/growlog/app-v1.3.html` |
-| 身高独立 demo | `https://tiemeng2000.github.io/growlog/height-demo-v1.3.html` |
-| 体重独立 demo | `https://tiemeng2000.github.io/growlog/weight-demo-v1.3.html` |
-| 排便独立 demo | `https://tiemeng2000.github.io/growlog/bowel-demo-v1.3.html` |
-| API 说明 | `https://tiemeng2000.github.io/growlog/api-v1.3.html` |
+| 整合 App | [app-v1.3.html](https://tiemeng2000.github.io/growlog/app-v1.3.html) |
+| 身高独立 demo | [height-demo-v1.3.html](https://tiemeng2000.github.io/growlog/height-demo-v1.3.html) |
+| 体重独立 demo | [weight-demo-v1.3.html](https://tiemeng2000.github.io/growlog/weight-demo-v1.3.html) |
+| 排便独立 demo | [bowel-demo-v1.3.html](https://tiemeng2000.github.io/growlog/bowel-demo-v1.3.html) |
+| API 说明 | [api-v1.3.html](https://tiemeng2000.github.io/growlog/api-v1.3.html) |
 
 本地构建、单文件浏览器验证、正式线上发布和生产云数据服务是不同结果；本轮只将实际完成的检查标记为通过。
 

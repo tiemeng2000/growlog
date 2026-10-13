@@ -211,6 +211,6 @@
 
 最终 `npm run test:e2e` 已执行并以 exit 0 完成：29 项通过（既有 App 14 项＋新增 API 15 项），0 失败、0 跳过；`npm test` 最终 23 项通过，TypeScript 构建检查 exit 0。整合回归验证了三个组件的独立入口、真实交互状态、列表往返、SDK iframe 重载与恢复、尺寸更新、记录／资料变化、错误输入与来源拒绝；身高还覆盖删除后记录日期范围缩小，使用导出状态在缺少已删记录的新 iframe 中精确恢复。新增公开 SDK 独立宿主回归验证 0 px 隐藏容器中的显式恢复请求返回已接受并排队，普通 Props 更新不丢失该请求，重新显示后恢复实际图形范围，随后交互不重复重放旧状态。
 
-预期发布入口为 `https://tiemeng2000.github.io/growlog/` 下的 `app-v1.3.html`、`height-demo-v1.3.html`、`weight-demo-v1.3.html`、`bowel-demo-v1.3.html` 和 `api-v1.3.html`。这些路径是本版发布目标；线上可用性需以发布后的实际检查另外登记，不能由本地构建通过推出。
+2026-10-13 已发布至 `https://tiemeng2000.github.io/growlog/`：`app-v1.3.html`、`height-demo-v1.3.html`、`weight-demo-v1.3.html`、`bowel-demo-v1.3.html` 和 `api-v1.3.html`，另提供两份同版本 Markdown 文档。七个文件均实际返回 HTTP 200，SHA256 与本机构建一致。已对发布后的 HTTPS 页面执行 5 项真实浏览器验证并全部通过：App 记录增删改与刷新保存、三个独立组件的交互／空状态／重载恢复、API 文档及导航；无未捕获脚本异常。
 
 手机端不显示组件的问题继续暂缓，真实 iPhone／Android、Mac 触控板及多用户生产云部署未纳入通过结论。静态单文件 App 预览的记录保存于当前浏览器，普通服务端模式仍使用 `/api/state`，不将这两个模式混称为生产云端保存已交付。
